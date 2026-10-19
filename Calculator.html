@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Calculator</title>
+	<style>
+		input[type="button"]
+		{
+			width:50px;
+			height:45px;
+		}
+		#a{
+			width:160px;
+			height:45px;
+		}
+		.b{
+			background-color:black;
+			border-radius:10px;
+		}
+		.z{
+			margin-top:3cm;
+		}
+	</style>
+	</head>
+	<body>
+	<script>
+		function pick(val)
+		{
+			document.getElementById("a").value +=val;
+		}
+		function solve()
+		{
+			var x=document.getElementById("a").value;
+			var y=eval(x);
+			document.getElementById("a").value=y;
+		}
+		function clr(val)
+		{
+			document.getElementById("a").value = " ";
+		}
+
+	</script>
+		<center>
+		<table width="20%" height="42%" class="z">
+		<tr>
+		<td>
+		<table width="22%" height="45%" class="b">
+		<tr>
+		<td>
+		<table>
+			<tr>
+				<td colspan="3"><input type="text" id="a"></td>
+				<td><input type="button" value="C" onclick="clr()"></td>
+			</tr>
+
+			<tr>
+			<td><input type="button" value="1" onclick="pick (1)"></td>
+			<td><input type="button" value="2" onclick="pick (2)"></td>
+			<td><input type="button" value="3" onclick="pick (3)"></td>
+			<td><input type="button" value="/" onclick="pick ('/')"></td>				
+			</tr>
+
+			<tr>
+			<td><input type="button" value="4" onclick="pick (4)"></td>
+			<td><input type="button" value="5" onclick="pick (5)"></td>
+			<td><input type="button" value="6" onclick="pick (6)"></td>
+			<td><input type="button" value="*" onclick="pick ('*')"></td>				
+			</tr>
+
+			<tr>
+			<td><input type="button" value="7" onclick="pick (7)"></td>
+			<td><input type="button" value="8" onclick="pick (8)"></td>
+			<td><input type="button" value="9" onclick="pick (9)"></td>
+			<td><input type="button" value="-" onclick="pick ('-')"></td>				
+			</tr>
+
+			<tr>
+			<td><input type="button" value="." onclick="pick ('.')"></td>
+			<td><input type="button" value="0" onclick="pick (0)"></td>
+			<td><input type="button" value="=" onclick="solve ('=')"></td>
+			<td><input type="button" value="+" onclick="pick ('+')"></td>				
+			</tr>
+
+		</table>
+		</td>
+		</tr>
+		</table>
+		</table>
+		
+	</body>
+</html>
